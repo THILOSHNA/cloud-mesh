@@ -8,13 +8,13 @@ renderer.setAnimationLoop(animationLoop);
 document.body.appendChild(renderer.domElement);
 
 var scene = new THREE.Scene();
-scene.background = new THREE.Color("gainsboro");
+scene.background = new THREE.Color("black");
 
 var camera = new THREE.PerspectiveCamera(30, innerWidth / innerHeight);
 camera.position.set(0, 0, 100);
 camera.lookAt(scene.position);
 
-var light = new THREE.PointLight("crimson", 3, 150, 4),
+var light = new THREE.PointLight("#D20062", 3, 150, 4),
   helper = new THREE.PointLightHelper(light);
 scene.add(light, helper);
 
